@@ -102,11 +102,11 @@ Key Features
 - Append-only architecture
 - External ADLS storage integration
 #### Example Tables
-- bronze_sales_orders
-- bronze_inventory
-- bronze_shipments
-- bronze_customers
-- bronze_products
+- bronze_dim_products
+- bronze_dim_product_pricing
+- bronze_dim_customers
+- bronze_dim_date
+- bronze_fact_orders
   
 ### Silver Layer – Data Transformation
 
@@ -121,10 +121,11 @@ Transformations Performed
 - Data enrichment
 - Incremental merge processing
 #### Example Tables
-- silver_sales_orders
-- silver_inventory
-- silver_customers
-- silver_products
+- silver_dim_products
+- silver_dim_product_pricing
+- silver_dim_customers
+- silver_dim_date
+- silver_fact_orders
   
 ### Gold Layer – Business Analytics
 
@@ -139,11 +140,11 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 - Supply chain efficiency
 - Retail distribution insights
 #### Example Gold Tables
-- fact_gold_sales
-- fact_gold_inventory
-- fact_gold_orders
-- dim_gold_customers
-- dim_gold_products
+- gold_dim_products
+- gold_dim_product_pricing
+- gold_dim_customers
+- gold_dim_date
+- gold_fact_orders
 
 # Fact Data Processing
 
