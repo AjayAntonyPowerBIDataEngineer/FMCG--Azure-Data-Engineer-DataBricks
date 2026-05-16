@@ -146,3 +146,22 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 - fact_gold_orders
 - dim_gold_customers
 - dim_gold_products
+
+# Databricks Orchestration
+
+Databricks Workflows orchestrate the complete pipeline.
+
+### Workflow Stages
+- Raw File Detection
+- Bronze Ingestion
+- Silver Transformations
+- Gold Aggregations
+- Parent Org Consolidation
+- Dashboard Refresh
+- Pipeline Characteristics
+
+✅ Automated orchestration
+✅ Dependency management
+✅ Retry mechanisms
+✅ Incremental processing
+✅ Scalable distributed execution
