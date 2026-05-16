@@ -67,10 +67,6 @@ The objective of this project is to build a centralized modern data platform cap
 ✅ Supporting parent organization consolidated reporting
 ✅ Building governed and reusable datasets for BI teams
 
-# Solution Architecture
-
-![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/60bf2434191f2941f1262315f47f4190d1fa32a3/Medallion%20Architecture%20FMCG.png)
-
 # Tech Stack 
 
 | Technology | Purpose |
@@ -88,11 +84,12 @@ The objective of this project is to build a centralized modern data platform cap
 | Gold Analytics Tables | Business-ready curated datasets for reporting and dashboards |
 | GitHub | Version control and project documentation |
 
-# Medallion Architecture
-The project follows the Bronze → Silver → Gold layered architecture pattern.
-## 
+# Solution Architecture
 
-## Bronze Layer – Raw Ingestion
+The project follows the Bronze → Silver → Gold layered architecture pattern.
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/60bf2434191f2941f1262315f47f4190d1fa32a3/Medallion%20Architecture%20FMCG.png)
+
+### Bronze Layer – Raw Ingestion
 
 The Bronze Layer stores raw ingested FMCG data exactly as received from source systems.
 
@@ -103,14 +100,14 @@ Key Features
 - Raw historical storage
 - Append-only architecture
 - External ADLS storage integration
-### Example Tables
+#### Example Tables
 - bronze_sales_orders
 - bronze_inventory
 - bronze_shipments
 - bronze_customers
 - bronze_products
   
-## Silver Layer – Data Transformation
+### Silver Layer – Data Transformation
 
 The Silver Layer applies cleansing, transformation, and standardization logic.
 
@@ -122,17 +119,17 @@ Transformations Performed
 - Column normalization
 - Data enrichment
 - Incremental merge processing
-### Example Tables
+#### Example Tables
 - silver_sales_orders
 - silver_inventory
 - silver_customers
 - silver_products
 - 
-## Gold Layer – Business Analytics
+### Gold Layer – Business Analytics
 
 The Gold Layer contains curated business-ready analytics tables optimized for reporting and dashboards.
 
-### Business KPIs Generated
+#### Business KPIs Generated
 - Revenue trends
 - FMCG sales performance
 - Inventory turnover
@@ -140,7 +137,7 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 - Regional sales analytics
 - Supply chain efficiency
 - Retail distribution insights
-### Example Gold Tables
+#### Example Gold Tables
 - fact_gold_sales
 - fact_gold_inventory
 - fact_gold_orders
@@ -151,9 +148,14 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 
 ![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/e87a04da1c1f40fd5505e4041a27605ec3dba129/Fact%20Data%20Processing.png)
 
-
-
 This architecture represents an incremental fact data processing pipeline using the Medallion Architecture (Bronze → Silver → Gold). Raw source files are ingested into the Bronze layer as append-only historical fact data. Incremental records are extracted into staging tables for data cleaning, validation, and transformations before being appended or merged into the Silver layer. Additional business transformations and aggregations are processed through staging before loading into the Gold layer for analytics reporting. Finally, child-level Gold facts are incrementally rolled up into Parent + Child aggregate tables, enabling efficient large-scale reporting without reprocessing the entire historical dataset.
+
+# Dimensional Data Processing
+
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/e87a04da1c1f40fd5505e4041a27605ec3dba129/Fact%20Data%20Processing.png)
+
+This dimensional data processing pipeline follows the Medallion Architecture approach, where source dimension data is ingested from the Landing Layer into the Bronze layer for raw data validation and cleansing. The cleaned data is then fully loaded into the Silver layer, where business transformations and schema standardization are applied. Finally, curated and analytics-ready dimension tables are loaded into the Gold layer to support downstream reporting, dashboarding, and business analytics workloads.
+
 
 # Data Model 
 
