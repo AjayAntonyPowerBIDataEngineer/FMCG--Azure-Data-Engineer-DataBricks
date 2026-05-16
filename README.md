@@ -69,7 +69,7 @@ The objective of this project is to build a centralized modern data platform cap
 
 # Solution Architecture
 
-![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/60a17e040906229b8c05139c4a03e2e868434a6c/Screenshot%20(139).png)
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/60bf2434191f2941f1262315f47f4190d1fa32a3/Medallion%20Architecture%20FMCG.png)
 
 # Tech Stack 
 
