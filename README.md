@@ -185,7 +185,7 @@ Databricks Workflows orchestrate the complete pipeline.
 - Gold Aggregations
 - Parent Org Consolidation
 - Dashboard Refresh
-- Pipeline Characteristics
+### Pipeline Characteristics
 
 - ✅ Automated orchestration
 - ✅ Dependency management
