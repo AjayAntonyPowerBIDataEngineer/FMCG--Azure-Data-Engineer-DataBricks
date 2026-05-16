@@ -69,5 +69,22 @@ The objective of this project is to build a centralized modern data platform cap
 
 # Solution Architecture
 
-![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/EcomAzureDataEngineerPipeline/blob/1074bc7d41e6225824d8796206c748a6110c451b/Screenshot%20(130).png)
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/60a17e040906229b8c05139c4a03e2e868434a6c/Screenshot%20(139).png)
 
+# Tech Stack 
+## ⚙️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Microsoft Azure | Cloud platform for scalable data engineering infrastructure |
+| Azure Data Lake Storage Gen2 (ADLS Gen2) | External storage for Bronze, Silver, and Gold layers |
+| Azure Databricks | Distributed data processing and transformation engine |
+| Databricks Workflows / Lakeflow Jobs | Pipeline orchestration and workflow automation |
+| Delta Lake | ACID-compliant storage layer for reliable lakehouse architecture |
+| Unity Catalog | Centralized data governance and access management |
+| Databricks Genie | Dashboarding and business analytics serving layer |
+| PySpark | Large-scale ETL processing and data transformation |
+| SQL | Data modeling, analytics, and Gold layer querying |
+| Medallion Architecture | Layered data lake design pattern (Bronze → Silver → Gold) |
+| Gold Analytics Tables | Business-ready curated datasets for reporting and dashboards |
+| GitHub | Version control and project documentation |
