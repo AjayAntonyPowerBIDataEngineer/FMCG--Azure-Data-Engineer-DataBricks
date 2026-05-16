@@ -88,30 +88,61 @@ The objective of this project is to build a centralized modern data platform cap
 | Gold Analytics Tables | Business-ready curated datasets for reporting and dashboards |
 | GitHub | Version control and project documentation |
 
-# End-to-End Data Flow
-1. Source systems incrementally load raw FMCG data into ADLS Gen2 Landing Zone using Azure Data Factory orchestration.
+# Medallion Architecture
+The project follows the Bronze → Silver → Gold layered architecture pattern.
+## 
 
-2. Raw landing zone files are stored in Parquet format inside ADLS Gen2 external storage.
+## Bronze Layer – Raw Ingestion
 
-3. Databricks Bronze Layer ingests raw Parquet data from ADLS Gen2 while preserving source-level historical records.
+The Bronze Layer stores raw ingested FMCG data exactly as received from source systems.
 
-4. Bronze Layer performs raw ingestion, schema validation, audit tracking, and incremental loading.
+Key Features
+- Incremental file ingestion
+- Schema preservation
+- Audit tracking
+- Raw historical storage
+- Append-only architecture
+- External ADLS storage integration
+### Example Tables
+- bronze_sales_orders
+- bronze_inventory
+- bronze_shipments
+- bronze_customers
+- bronze_products
+  
+## Silver Layer – Data Transformation
 
-5. Silver Layer applies business transformations including:
-   - Data cleansing
-   - Null handling
-   - Deduplication
-   - Standardization
-   - Data quality validation
+The Silver Layer applies cleansing, transformation, and standardization logic.
 
-6. Gold Layer generates business-ready analytics tables optimized for enterprise reporting and dashboard consumption.
+Transformations Performed
+- Null handling
+- Deduplication
+- Data quality validation
+- Standardized business schema
+- Column normalization
+- Data enrichment
+- Incremental merge processing
+### Example Tables
+- silver_sales_orders
+- silver_inventory
+- silver_customers
+- silver_products
+- 
+## Gold Layer – Business Analytics
 
-7. Databricks Lakeflow Jobs orchestrate the complete Bronze → Silver → Gold transformation pipeline.
+The Gold Layer contains curated business-ready analytics tables optimized for reporting and dashboards.
 
-8. Parent organization Gold analytics tables already exist within the enterprise environment.
-
-9. A dedicated data pipeline pushes Child Organization Gold data into Parent Organization tables:
-   - Fact tables use staging-based incremental append strategy
-   - Dimension tables use overwrite/upsert strategy
-
-10. Final curated Gold datasets are consumed by Databricks Genie dashboards for business analytics and executive reporting.
+### Business KPIs Generated
+- Revenue trends
+- FMCG sales performance
+- Inventory turnover
+- Product category analysis
+- Regional sales analytics
+- Supply chain efficiency
+- Retail distribution insights
+### Example Gold Tables
+- fact_gold_sales
+- fact_gold_inventory
+- fact_gold_orders
+- dim_gold_customers
+- dim_gold_products
