@@ -147,6 +147,10 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 - dim_gold_customers
 - dim_gold_products
 
+# Fact Data Processing
+
+This architecture represents an incremental fact data processing pipeline using the Medallion Architecture (Bronze → Silver → Gold). Raw source files are ingested into the Bronze layer as append-only historical fact data. Incremental records are extracted into staging tables for data cleaning, validation, and transformations before being appended or merged into the Silver layer. Additional business transformations and aggregations are processed through staging before loading into the Gold layer for analytics reporting. Finally, child-level Gold facts are incrementally rolled up into Parent + Child aggregate tables, enabling efficient large-scale reporting without reprocessing the entire historical dataset.
+
 # Data Model 
 
 ### Implemented a Star Schema Data Model.
@@ -157,6 +161,29 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 # BI Dashboard
 
 ![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/af837a96e9bb8df42588b68e5d660c993d03bf1d/Dashboard.png)
+
+The Sales Insights Dashboard provides a comprehensive overview of business performance by tracking key metrics such as Total Revenue, Total Quantity Sold, Unique Customers, and Average Selling Price (ASP). It enables users to analyze top-performing products, monitor monthly revenue trends, and evaluate sales contribution across different channels. Interactive filters for Year, Quarter, Month, Channel, and Category allow detailed drill-down analysis, helping stakeholders make data-driven decisions related to sales growth, customer behavior, pricing strategy, and channel performance.
+
+# Databricks Orchestration
+
+Databricks Workflows orchestrate the complete pipeline.
+
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/af837a96e9bb8df42588b68e5d660c993d03bf1d/Orchestration.png)
+
+### Workflow Stages
+- Raw File Detection
+- Bronze Ingestion
+- Silver Transformations
+- Gold Aggregations
+- Parent Org Consolidation
+- Dashboard Refresh
+- Pipeline Characteristics
+
+✅ Automated orchestration
+✅ Dependency management
+✅ Retry mechanisms
+✅ Incremental processing
+✅ Scalable distributed execution
 
 # Project Structure
 ```plaintext
@@ -192,27 +219,6 @@ fmcg-azure-data-engineering-platform/
 └── docs/
     └── implementation_notes/
 ```
-
-# Databricks Orchestration
-
-Databricks Workflows orchestrate the complete pipeline.
-
-![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/af837a96e9bb8df42588b68e5d660c993d03bf1d/Orchestration.png)
-
-### Workflow Stages
-- Raw File Detection
-- Bronze Ingestion
-- Silver Transformations
-- Gold Aggregations
-- Parent Org Consolidation
-- Dashboard Refresh
-- Pipeline Characteristics
-
-✅ Automated orchestration
-✅ Dependency management
-✅ Retry mechanisms
-✅ Incremental processing
-✅ Scalable distributed execution
 
 # Key Engineering Concepts Implemented
 - Medallion Architecture
