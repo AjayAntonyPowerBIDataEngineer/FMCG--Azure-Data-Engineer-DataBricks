@@ -61,11 +61,11 @@ Complex parent-child organization reporting
 
 The objective of this project is to build a centralized modern data platform capable of:
 
-✅ Handling enterprise-scale FMCG data
-✅ Enabling near real-time analytics
-✅ Improving reporting performance
-✅ Supporting parent organization consolidated reporting
-✅ Building governed and reusable datasets for BI teams
+- ✅ Handling enterprise-scale FMCG data
+- ✅ Enabling near real-time analytics
+- ✅ Improving reporting performance
+- ✅ Supporting parent organization consolidated reporting
+- ✅ Building governed and reusable datasets for BI teams
 
 # Tech Stack 
 
