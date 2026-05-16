@@ -69,4 +69,5 @@ The objective of this project is to build a centralized modern data platform cap
 
 # Solution Architecture
 
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/EcomAzureDataEngineerPipeline/blob/1074bc7d41e6225824d8796206c748a6110c451b/Screenshot%20(130).png)
 
