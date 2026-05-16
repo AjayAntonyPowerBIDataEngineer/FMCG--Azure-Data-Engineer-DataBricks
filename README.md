@@ -72,7 +72,6 @@ The objective of this project is to build a centralized modern data platform cap
 ![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/60a17e040906229b8c05139c4a03e2e868434a6c/Screenshot%20(139).png)
 
 # Tech Stack 
-## ⚙️ Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -88,3 +87,31 @@ The objective of this project is to build a centralized modern data platform cap
 | Medallion Architecture | Layered data lake design pattern (Bronze → Silver → Gold) |
 | Gold Analytics Tables | Business-ready curated datasets for reporting and dashboards |
 | GitHub | Version control and project documentation |
+
+# End-to-End Data Flow
+1. Source systems incrementally load raw FMCG data into ADLS Gen2 Landing Zone using Azure Data Factory orchestration.
+
+2. Raw landing zone files are stored in Parquet format inside ADLS Gen2 external storage.
+
+3. Databricks Bronze Layer ingests raw Parquet data from ADLS Gen2 while preserving source-level historical records.
+
+4. Bronze Layer performs raw ingestion, schema validation, audit tracking, and incremental loading.
+
+5. Silver Layer applies business transformations including:
+   - Data cleansing
+   - Null handling
+   - Deduplication
+   - Standardization
+   - Data quality validation
+
+6. Gold Layer generates business-ready analytics tables optimized for enterprise reporting and dashboard consumption.
+
+7. Databricks Lakeflow Jobs orchestrate the complete Bronze → Silver → Gold transformation pipeline.
+
+8. Parent organization Gold analytics tables already exist within the enterprise environment.
+
+9. A dedicated data pipeline pushes Child Organization Gold data into Parent Organization tables:
+   - Fact tables use staging-based incremental append strategy
+   - Dimension tables use overwrite/upsert strategy
+
+10. Final curated Gold datasets are consumed by Databricks Genie dashboards for business analytics and executive reporting.
