@@ -147,9 +147,48 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 - dim_gold_customers
 - dim_gold_products
 
+# Data Model 
+
+
+
 # BI Dashboard
 
 ![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/af837a96e9bb8df42588b68e5d660c993d03bf1d/Dashboard.png)
+
+# Project Structure
+```plaintext
+fmcg-azure-data-engineering-platform/
+│
+├── README.md
+│
+├── architecture/
+│   └── architecture_diagram.png
+│
+├── datasets/
+│   └── raw_s3_files/
+│
+├── databricks/
+│   ├── bronze_layer/
+│   ├── silver_layer/
+│   ├── gold_layer/
+│   ├── orchestration/
+│   └── utilities/
+│
+├── sql/
+│   ├── bronze_tables/
+│   ├── silver_tables/
+│   ├── gold_tables/
+│   └── analytics_views/
+│
+├── dashboards/
+│   └── genie_dashboard_queries/
+│
+├── workflows/
+│   └── lakeflow_jobs/
+│
+└── docs/
+    └── implementation_notes/
+```
 
 # Databricks Orchestration
 
