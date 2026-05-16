@@ -87,6 +87,7 @@ The objective of this project is to build a centralized modern data platform cap
 # Solution Architecture
 
 The project follows the Bronze → Silver → Gold layered architecture pattern.
+
 ![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/60bf2434191f2941f1262315f47f4190d1fa32a3/Medallion%20Architecture%20FMCG.png)
 
 ### Bronze Layer – Raw Ingestion
@@ -124,7 +125,7 @@ Transformations Performed
 - silver_inventory
 - silver_customers
 - silver_products
-- 
+  
 ### Gold Layer – Business Analytics
 
 The Gold Layer contains curated business-ready analytics tables optimized for reporting and dashboards.
