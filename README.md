@@ -151,7 +151,7 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 
 ### Implemented a Star Schema Data Model.
 
-![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/af837a96e9bb8df42588b68e5d660c993d03bf1d/Dashboard.png)
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/63ca224f1606b06070cf410ab1079eca48b87805/Data%20Model.png)
 
 
 # BI Dashboard
