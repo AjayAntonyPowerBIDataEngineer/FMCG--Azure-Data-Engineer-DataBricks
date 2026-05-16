@@ -149,6 +149,10 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 
 # Fact Data Processing
 
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/e87a04da1c1f40fd5505e4041a27605ec3dba129/Fact%20Data%20Processing.png)
+
+
+
 This architecture represents an incremental fact data processing pipeline using the Medallion Architecture (Bronze → Silver → Gold). Raw source files are ingested into the Bronze layer as append-only historical fact data. Incremental records are extracted into staging tables for data cleaning, validation, and transformations before being appended or merged into the Silver layer. Additional business transformations and aggregations are processed through staging before loading into the Gold layer for analytics reporting. Finally, child-level Gold facts are incrementally rolled up into Parent + Child aggregate tables, enabling efficient large-scale reporting without reprocessing the entire historical dataset.
 
 # Data Model 
