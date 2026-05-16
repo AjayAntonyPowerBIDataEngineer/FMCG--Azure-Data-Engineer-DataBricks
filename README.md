@@ -186,11 +186,11 @@ Databricks Workflows orchestrate the complete pipeline.
 - Dashboard Refresh
 - Pipeline Characteristics
 
-✅ Automated orchestration
-✅ Dependency management
-✅ Retry mechanisms
-✅ Incremental processing
-✅ Scalable distributed execution
+- ✅ Automated orchestration
+- ✅ Dependency management
+- ✅ Retry mechanisms
+- ✅ Incremental processing
+- ✅ Scalable distributed execution
 
 # Project Structure
 ```plaintext
@@ -226,6 +226,9 @@ fmcg-azure-data-engineering-platform/
 └── docs/
     └── implementation_notes/
 ```
+# Business Impact
+
+This solution enables organizations to centralize and modernize their analytics platform by building a scalable Lakehouse architecture for enterprise reporting and decision-making. By transforming raw operational data into curated business-ready datasets, the platform helps stakeholders monitor seller performance, analyze product and sales trends, identify delivery and logistics inefficiencies, optimize customer experience, and track key revenue and operational KPIs through scalable and governed analytics solutions.
 
 # Key Engineering Concepts Implemented
 - Medallion Architecture
@@ -239,4 +242,13 @@ fmcg-azure-data-engineering-platform/
 - Databricks Workflow Orchestration
 - Parent-Child Data Consolidation
 - Enterprise Analytics Modeling
+
+# Author & Contact
+
+Ajay Suresh
+Azure Data Engineer | Power BI Developer
+
+💼 Focus Areas: Azure Data Engineering, ETL Pipelines, PySpark, Data Warehousing, Power BI
+- 🔗 LinkedIn Portfolio
+- 🔗 GitHub Projects
 
