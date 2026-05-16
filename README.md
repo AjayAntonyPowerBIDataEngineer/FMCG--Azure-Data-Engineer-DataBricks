@@ -17,7 +17,7 @@ End-to-End Enterprise Data Engineering Solution using Azure Databricks, ADLS Gen
 - [Parent & Child Organization Architecture](#parent--child-organization-architecture)
 - [Serving Layer & Analytics](#serving-layer--analytics)
 - [Databricks Orchestration](#databricks-orchestration)
-- [Business Use Cases](#business-use-cases)
+- [BI Dashboard](#bi-dashboard)
 - [Key Engineering Concepts Implemented](#key-engineering-concepts-implemented)
 - [Architecture Diagram](#architecture-diagram)
 - [How to Run This Project](#how-to-run-this-project)
@@ -147,6 +147,10 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 - dim_gold_customers
 - dim_gold_products
 
+# BI Dashboard
+
+
+
 # Databricks Orchestration
 
 Databricks Workflows orchestrate the complete pipeline.
@@ -165,3 +169,17 @@ Databricks Workflows orchestrate the complete pipeline.
 ✅ Retry mechanisms
 ✅ Incremental processing
 ✅ Scalable distributed execution
+
+# Key Engineering Concepts Implemented
+- Medallion Architecture
+- Delta Lake Architecture
+- External ADLS Storage
+- Incremental ETL Processing
+- Delta MERGE Operations
+- Enterprise Data Governance
+- Distributed Data Processing
+- Data Quality Validation
+- Databricks Workflow Orchestration
+- Parent-Child Data Consolidation
+- Enterprise Analytics Modeling
+
