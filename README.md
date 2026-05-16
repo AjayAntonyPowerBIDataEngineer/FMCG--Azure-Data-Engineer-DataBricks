@@ -149,11 +149,13 @@ The Gold Layer contains curated business-ready analytics tables optimized for re
 
 # BI Dashboard
 
-
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/af837a96e9bb8df42588b68e5d660c993d03bf1d/Dashboard.png)
 
 # Databricks Orchestration
 
 Databricks Workflows orchestrate the complete pipeline.
+
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/af837a96e9bb8df42588b68e5d660c993d03bf1d/Orchestration.png)
 
 ### Workflow Stages
 - Raw File Detection
