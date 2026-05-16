@@ -162,7 +162,7 @@ This dimensional data processing pipeline follows the Medallion Architecture app
 
 ### Implemented a Star Schema Data Model.
 
-![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/c110e1820a02c0c3279ebdf04895c1f6a14e237c/DimDataProcessing.png)
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/25d9dcec7c8d3806813ce6f86e61871eb5d509e4/Data%20Model.png)
 
 
 # BI Dashboard
