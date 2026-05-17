@@ -190,35 +190,81 @@ Databricks Workflows orchestrate the complete pipeline.
 ```plaintext
 fmcg-azure-data-engineering-platform/
 │
-├── README.md
+├── Dashboard/
+│   ├── DashboardFMCG.png
+│   └── Demo/
 │
-├── architecture/
-│   └── architecture_diagram.png
+├── Data_Model/
+│   ├── Data_Model.png
+│   └── Demo/
 │
-├── datasets/
-│   └── raw_s3_files/
+├── DimFactDataProcessing/
+│   ├── DimDataProcessing.png
+│   ├── FactDataProcessing.png
+│   └── Demo/
 │
-├── databricks/
-│   ├── bronze_layer/
-│   ├── silver_layer/
-│   ├── gold_layer/
-│   ├── orchestration/
-│   └── utilities/
+├── Solution_Architecture/
+│   ├── Medallion_Architecture_FMCG.png
+│   └── Orchestration.png
 │
-├── sql/
-│   ├── bronze_tables/
-│   ├── silver_tables/
-│   ├── gold_tables/
-│   └── analytics_views/
+├── code/
+│   │
+│   ├── dimension_data_processing/
+│   │   ├── 1_customers_data_processing.ipynb
+│   │   ├── 2_products_data_processing.ipynb
+│   │   └── 3_pricing_data_processing.ipynb
+│   │
+│   ├── fact_data_processing/
+│   │   ├── 1_full_load_fact.ipynb
+│   │   └── 2_incremental_load_fact.ipynb
+│   │
+│   └── setup/
+│       ├── dim_date_table_creation.ipynb
+│       ├── setup_catalog.ipynb
+│       └── utilities.ipynb
 │
-├── dashboards/
-│   └── genie_dashboard_queries/
+├── data/
+│   │
+│   ├── child_company/
+│   │   │
+│   │   ├── full_load/
+│   │   │   │
+│   │   │   ├── customers/
+│   │   │   │   └── customers.csv
+│   │   │   │
+│   │   │   ├── gross_price/
+│   │   │   │   └── gross_price.csv
+│   │   │   │
+│   │   │   ├── orders/
+│   │   │   │   └── landing/
+│   │   │   │       ├── orders_2025_07_01.csv
+│   │   │   │       ├── orders_2025_07_02.csv
+│   │   │   │       └── ...
+│   │   │   │
+│   │   │   └── products/
+│   │   │       └── products.csv
+│   │   │
+│   │   └── incremental_load/
+│   │       └── orders/
+│   │           ├── orders_2025_12_01.csv
+│   │           ├── orders_2025_12_02.csv
+│   │           └── ...
+│   │
+│   ├── parent_company/
+│   │   │
+│   │   ├── full_load/
+│   │   │   ├── dim_customers.csv
+│   │   │   ├── dim_gross_price.csv
+│   │   │   ├── dim_products.csv
+│   │   │   └── fact_orders.csv
+│   │   │
+│   │   └── incremental_load/
+│   │       └── fact_orders.csv
+│   │
+│   └── goldview_reporting/
+│       └── denormalise_table_query_fmcg.txt
 │
-├── workflows/
-│   └── lakeflow_jobs/
-│
-└── docs/
-    └── implementation_notes/
+└── README.md
 ```
 # Business Impact
 
