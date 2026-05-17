@@ -161,7 +161,7 @@ This dimensional data processing pipeline follows the Medallion Architecture app
 
 # BI Dashboard
 
-![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/af837a96e9bb8df42588b68e5d660c993d03bf1d/Dashboard.png)
+![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/8f05f99866baa90823f7c18b712bdfbf49bd1188/Dashboard/DashboardFMCG.png)
 
 The Sales Insights Dashboard provides a comprehensive overview of business performance by tracking key metrics such as Total Revenue, Total Quantity Sold, Unique Customers, and Average Selling Price (ASP). It enables users to analyze top-performing products, monitor monthly revenue trends, and evaluate sales contribution across different channels. Interactive filters for Year, Quarter, Month, Channel, and Category allow detailed drill-down analysis, helping stakeholders make data-driven decisions related to sales growth, customer behavior, pricing strategy, and channel performance.
 
