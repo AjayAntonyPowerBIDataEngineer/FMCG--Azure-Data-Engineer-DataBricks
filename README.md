@@ -147,8 +147,6 @@ This architecture represents an incremental fact data processing pipeline using 
 
 # Dimensional Data Processing
 
-![image_alt](https://github.com/AjayAntonyPowerBIDataEngineer/FMCG--Azure-Data-Engineer-DataBricks/blob/e87a04da1c1f40fd5505e4041a27605ec3dba129/Fact%20Data%20Processing.png)
-
 This dimensional data processing pipeline follows the Medallion Architecture approach, where source dimension data is ingested from the Landing Layer into the Bronze layer for raw data validation and cleansing. The cleaned data is then fully loaded into the Silver layer, where business transformations and schema standardization are applied. Finally, curated and analytics-ready dimension tables are loaded into the Gold layer to support downstream reporting, dashboarding, and business analytics workloads.
 
 
